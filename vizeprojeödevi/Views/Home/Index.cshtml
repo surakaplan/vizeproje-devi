@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Giriş";
+}
+
+<h2>Giriş Ekranı</h2>
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <div>
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <label for="password">Şifre:</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <button type="submit">Giriş Yap</button>
+}
